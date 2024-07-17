@@ -27,23 +27,21 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const number = document.getElementById('number').value;
     const message = document.getElementById('message').value;
 
-    // URL API Telegram
-    const telegramApiUrl = `https://api.telegram.org/bot7280027956:AAG7TDgH6v22fkfN4PfkvfPXUZEG4o2th2A/sendMessage?chat_id=6468643791&text=Nama:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0ANomor:%20${encodeURIComponent(number)}%0APesan:%20${encodeURIComponent(message)}`;
+    // Ganti YOUR_BOT_TOKEN dan YOUR_CHAT_ID dengan token bot dan chat ID Anda
+    const telegramApiUrl = `https://api.telegram.org/botYOUR_BOT_TOKEN/sendMessage`;
+    const chatId = 'YOUR_CHAT_ID';
+    const textMessage = `Nama: ${name}\nEmail: ${email}\nNomor: ${number}\nPesan: ${message}`;
+    const url = `${telegramApiUrl}?chat_id=${chatId}&text=${encodeURIComponent(textMessage)}`;
 
-    fetch(telegramApiUrl, {
+    fetch(url, {
         method: 'POST'
     })
-    .then(response => {
-        if (response.ok) {
-            alert('Pesan berhasil dikirim!');
-        } else {
-            throw new Error('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
-        }
+    .then(response => response.json())
+    .then(data => {
+        alert('Pesan Anda telah dikirim!');
+        formContainer.style.display = 'none';
     })
     .catch(error => {
-        alert('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
+        console.error('Terjadi kesalahan:', error);
     });
-
-    // Sembunyikan formulir setelah pesan dikirim
-    formContainer.style.display = 'none';
 });
