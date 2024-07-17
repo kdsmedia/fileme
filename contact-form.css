@@ -1,92 +1,72 @@
 /* contact-form.css */
-#contact-form-container {
-    display: none; /* Hidden by default */
+
+/* Gaya untuk kontainer formulir */
+.form-container {
+    display: none; /* Formulir kontak tidak akan ditampilkan secara default */
     position: fixed;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 500px; /* Ukuran maksimal formulir */
-    height: auto;
-    overflow: auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih dengan transparansi */
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow halus untuk efek depth */
-    border-radius: 10px; /* Sudut membulat */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Pastikan formulir tampil di atas konten lain */
 }
 
+/* Gaya untuk konten formulir */
 .form-content {
-    padding: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
 }
 
-.form-content h2 {
-    margin: 0 0 10px;
-    color: #333;
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* Gaya untuk tombol tutup */
+#close-form {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.form-content p {
-    margin: 0 0 15px;
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: center;
-}
-
-form {
+/* Gaya untuk formulir */
+#contact-form {
     display: flex;
     flex-direction: column;
 }
 
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+/* Gaya untuk label */
+#contact-form label {
+    margin-top: 10px;
 }
 
-input, textarea {
+/* Gaya untuk input dan textarea */
+#contact-form input, #contact-form textarea {
+    margin-top: 5px;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #888;
-}
-
-textarea {
-    resize: none;
-}
-
-button {
-    background-color: #007BFF; /* Warna biru netral */
-    color: white; /* Teks putih */
-    border: 1px solid #007BFF; /* Border biru netral */
-    padding: 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3; /* Biru lebih gelap saat hover */
-    border-color: #0056b3; /* Border biru lebih gelap saat hover */
-}
-
-#close-form {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: #aaa;
+/* Gaya untuk tombol kirim */
+#contact-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-#close-form:hover {
-    color: #333;
+#contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Gaya untuk pesan kesalahan */
+.error-message {
+    color: red;
+    font-weight: bold;
 }
