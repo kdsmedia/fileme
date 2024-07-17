@@ -1,0 +1,90 @@
+/* CSS untuk Formulir Kontak */
+#contact-form-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px; /* Ukuran maksimal formulir */
+    height: auto;
+    overflow: auto;
+    background-color: rgba(255,255,255,0.9); /* Latar belakang putih dengan transparansi */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Shadow halus untuk efek depth */
+    border-radius: 10px; /* Sudut membulat */
+}
+
+.form-content {
+    padding: 10px;
+}
+
+.form-content h2 {
+    margin: 0 0 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.form-content p {
+    margin: 0 0 15px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #007BFF; /* Warna biru netral */
+    color: white; /* Teks putih */
+    border: none; /* Tanpa border */
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Biru lebih gelap saat hover */
+}
+
+#close-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+#close-form:hover {
+    color: #333;
+}
