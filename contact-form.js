@@ -2,8 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Cek jika URL mengandung '/p/contact.html'
-    if (window.location.pathname === '/p/contact.html') {
-        fetch('https://raw.githubusercontent.com/username/repository/main/contact-form.html')
+    if (window.location.pathname === 'https://appsidhanieofficial.blogspot.com/p/contact.html') {
+        fetch('https://raw.githubusercontent.com/kdsmedia/fileme/main/contact-form.html')
             .then(response => response.text())
             .then(html => {
                 document.body.insertAdjacentHTML('beforeend', html);
