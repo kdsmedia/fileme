@@ -1,4 +1,4 @@
-/* CSS untuk Formulir Kontak */
+/* contact-form.css */
 #contact-form-container {
     display: none; /* Hidden by default */
     position: fixed;
@@ -10,9 +10,9 @@
     max-width: 500px; /* Ukuran maksimal formulir */
     height: auto;
     overflow: auto;
-    background-color: rgba(255,255,255,0.9); /* Latar belakang putih dengan transparansi */
+    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih dengan transparansi */
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Shadow halus untuk efek depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow halus untuk efek depth */
     border-radius: 10px; /* Sudut membulat */
 }
 
@@ -49,6 +49,7 @@ label {
 input, textarea {
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid #ccc;
     margin-bottom: 10px;
     font-size: 14px;
 }
@@ -64,7 +65,7 @@ textarea {
 button {
     background-color: #007BFF; /* Warna biru netral */
     color: white; /* Teks putih */
-    border: none; /* Tanpa border */
+    border: 1px solid #007BFF; /* Border biru netral */
     padding: 12px;
     border-radius: 5px;
     cursor: pointer;
@@ -74,6 +75,7 @@ button {
 
 button:hover {
     background-color: #0056b3; /* Biru lebih gelap saat hover */
+    border-color: #0056b3; /* Border biru lebih gelap saat hover */
 }
 
 #close-form {
